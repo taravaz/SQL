@@ -1,0 +1,26 @@
+--Create a store database
+
+CREATE TABLE store_leggings (id integer primary key, color TEXT, price INTEGER, quantity INTEGER, size TEXT);
+INSERT INTO store_leggings VALUES (1, "Blue", 25, 50, "Medium");
+INSERT INTO store_leggings VALUES (2, "Red", 30, 75, "Small");
+INSERT INTO store_leggings VALUES (3, "Green", 15, 80, "Large");
+INSERT INTO store_leggings VALUES (4, "Yellow", 20, 100, "Large");
+INSERT INTO store_leggings VALUES (5, "Brown", 27, 78, "Medium");
+INSERT INTO store_leggings VALUES (6, "Black", 20, 120, "Petite");
+INSERT INTO store_leggings VALUES (7, "Lilac", 19, 35, "Small");
+INSERT INTO store_leggings VALUES (8, "Burgundy", 22, 40, "Medium");
+INSERT INTO store_leggings VALUES (9, "Beige", 28, 55, "Large");
+INSERT INTO store_leggings VALUES (10, "Gray", 32, 73, "Small");
+INSERT INTO store_leggings VALUES (11, "White", 26, 43, "Petite");
+INSERT INTO store_leggings VALUES (12, "Orange", 35, 65, "Medium");
+INSERT INTO store_leggings VALUES (13, "Pink", 32, 85, "Large");
+INSERT INTO store_leggings VALUES (14, "Gold", 40, 70, "Medium");
+INSERT INTO store_leggings VALUES (15, "Silver", 40, 73, "Large");
+
+--display the database ordered by price
+
+SELECT * FROM store_leggings ORDER BY price;
+
+--what are the total number of leggings by size?
+
+SELECT size, SUM(quantity) FROM store_leggings GROUP BY size;
