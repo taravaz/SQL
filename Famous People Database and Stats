@@ -1,0 +1,149 @@
+/* Create table about the famous people and what they do here */
+CREATE TABLE famous_people (id INTEGER PRIMARY KEY, 
+fullname TEXT,
+marital_status TEXT, 
+movie_title TEXT, 
+spouse_name TEXT);
+INSERT INTO famous_people (fullname, marital_status, movie_title, spouse_name) VALUES ("Tom_Hanks", "yes", "Big", "Rita_Wilson");
+INSERT INTO famous_people (fullname, marital_status, movie_title, spouse_name) VALUES ("Danny_DeVito", "yes", "Sing", "Rhea_Perlman");
+INSERT INTO famous_people (fullname, marital_status, movie_title, spouse_name) VALUES ("Samuel_Jackson", "yes", "Freedomland", "Latanya_Richardson_Jackson");
+INSERT INTO famous_people (fullname, marital_status, movie_title, spouse_name) VALUES ("Anna_Paquin", "yes", "True_Blood","Stephen_Moyer");
+INSERT INTO famous_people (fullname, marital_status, movie_title, spouse_name) VALUES ("Daniel_Craig", "yes", "Dream_House", "Rachel_Weisz");
+INSERT INTO famous_people (fullname, marital_status, movie_title, spouse_name) VALUES ("Denzel_Washington", "yes", "Wilma", "Pauletta_Washington");
+
+/* Create table about the famous husbands */
+CREATE TABLE famous_husband (id INTEGER PRIMARY KEY, 
+name TEXT,
+birthday INTEGER,
+hometown TEXT,
+occupation TEXT);
+INSERT INTO famous_husband (name, birthday, hometown, occupation) VALUES ("Tom_Hanks", "7_9_1956", "Concord_CA", "actor");
+INSERT INTO famous_husband (name, birthday, hometown, occupation) VALUES ("Samuel_Jackson", "12_21_1948", "Washington_DC", "actor");
+INSERT INTO famous_husband (name, birthday, hometown, occupation) VALUES ("Stephen_Moyer", "10_11_1969", "Brentwood_UK", "actor");
+INSERT INTO famous_husband (name, birthday, hometown, occupation) VALUES ("Danny_DeVito", "11_17_1944", "Neptune_Township_NJ", "actor");
+INSERT INTO famous_husband (name, birthday, hometown, occupation) VALUES ("Daniel_Craig", "3_2_1968", "Chester_UK", "actor");
+INSERT INTO famous_husband (name, birthday, hometown, occupation) VALUES ("Denzel_Washington", "12_28_1954", "Mount_Vernon_NY", "actor");
+
+/* Create table about the famous wives */
+CREATE TABLE famous_wives (id INTEGER PRIMARY KEY, 
+name TEXT,
+birthday INTEGER,
+hometown TEXT,
+occupation TEXT);
+INSERT INTO famous_wives (name, birthday, hometown, occupation) VALUES ("Rita_Wilson", "10_26_1956", "Hollywood_CA", "actress");
+INSERT INTO famous_wives (name, birthday, hometown, occupation) VALUES ("Latanya_Richardson_Jackson", "10_21_1949", "Atlanta_GA", "actress");
+INSERT INTO famous_wives (name, birthday, hometown, occupation) VALUES ("Rhea_Perlman", "3_31_1948", "New_York_NY", "actress");
+INSERT INTO famous_wives (name, birthday, hometown, occupation) VALUES ("Anna_Paquin", "7_24_1982", "Winnipeg_Can", "actress");
+INSERT INTO famous_wives (name, birthday, hometown, occupation) VALUES ("Rachel Weisz", "3_7_70", "London_UK", "actress");
+INSERT INTO famous_wives (name, birthday, hometown, occupation) VALUES ("Pauletta_Washington", "9_28_1950", "Newton_NC", "actress");
+
+/* Create table about the movie stars */
+CREATE TABLE movie_stars (id INTEGER PRIMARY KEY, 
+actor TEXT,
+famous INTEGER,
+children INTEGER,
+age INTEGER);
+INSERT INTO movie_stars (actor, famous, children, age) VALUES ("Rita_Wilson", "6", "2", "65");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES ("Pauletta_Washington", "3", "4", "70");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES ("Rachel_Weisz", "6", "1", "52");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES ("Rhea_Perlman", "7", "3", "74");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Latanya_Richardson_Jackson", "2", "1", "72");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Anna_Paquin", "4", "2", "39");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Tom_Hanks", "10", "2", "65");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Samuel_Jackson", "10", "1", "73");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Daniel_Craig", "9", "1", "54");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Danny_DeVito", "7", "3", "77");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Denzel_Washington", "10", "4", "67");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Stephen_Moyer", "2", "2", "52");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Steve_Carrell", "8", "2", "59");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Jim_Carrey", "10", "1", "60");
+INSERT INTO movie_stars (actor, famous, children, age) VALUES
+("Brad_Pitt", "10", "6", "58");
+
+
+
+/* Create table about the movies and stats*/
+CREATE TABLE movies (id INTEGER PRIMARY KEY, 
+movie_name TEXT,
+year INTEGER,
+money_earned INTEGER,
+starring TEXT,
+rating INTEGER);
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("World_War_Z", "2013", "540000000", "Brad_Pitt", "7");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Fences", "2016", "64000000", "Denzel_Washngton", "7");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Forrest_Gump", "1994", "678000000", "Tom_Hanks", "8");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Avengers", "2019", "2000000000", "Samuel_Jackson", "8");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Twins", "1988", "107000000", "Danny_DeVito", "6");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Skyfall", "2012", "304000000", "Daniel_Craig", "7");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Confession", "2022","1000000", "Stephen_Moyer", "3");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Irrestible", "2020", "474000", "Steve Carrell", "6");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Its_Complicated", "2009", "112000000", "Rita_Wilson", "6");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Eternals", "2021", "164000000", "Angelina_Jolie", "6");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Dune", "2021", "108000000", "Timothee_Chalamet", "8");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Fallout", "2018", "791000000", "Tom_Cruise", "7");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Uncharted", "2022", "401000000", "Tom_Hiddleston", "6");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Moonfall", "2022", "58000000", "Halle_Berry", "5");
+INSERT INTO movies (movie_name, year, money_earned, starring, rating) VALUES ("Aquaman", "2018", "1000000000", "Jason_Momoa", "6");
+
+Display the famous people database
+SELECT * 
+FROM famous_people;
+
+Display the famous people by movie
+SELECT fullname, movie_title
+FROM famous_people;
+
+Display famous people with their spouses
+SELECT fullname, spouse_name
+FROM famous_people;
+
+Display the famous husband database
+SELECT *
+FROM famous_husband;
+
+Display the famous wives database
+SELECT * 
+FROM famous_wives;
+
+Display the movies database
+SELECT *
+FROM movies;
+
+Display the movie stars database
+SELECT * 
+FROM movie_stars;
+
+Which actor had the highest grossing movie in the database?
+/* outer join */
+SELECT movie_stars.actor, movie_stars.famous, SUM(movies.money_earned)
+AS box_office
+FROM movie_stars
+LEFT OUTER JOIN movies
+ON movie_stars.id = movies.id
+GROUP BY movie_stars.actor ORDER BY box_office desc;
+
+Which actor had the highest movie rating in the database?
+/* outer join */
+SELECT famous_people.fullname, movies.movie_name, movies.rating
+FROM famous_people
+LEFT OUTER JOIN movies
+ON famous_people.fullname = movies.starring
+GROUP BY famous_people.fullname ORDER BY rating desc;
+
+Which actor starred in the oldest movies?
+/* outer join */
+SELECT movie_stars.actor, movies.starring, movies.year
+FROM movie_stars
+LEFT OUTER JOIN movies
+ON movie_stars.actor = movies.starring
+GROUP BY movie_stars.actor ORDER BY year asc;
