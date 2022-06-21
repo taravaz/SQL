@@ -1,0 +1,67 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE languages (ID INTEGER PRIMARY KEY,
+    name TEXT,
+    popularity INTEGER,
+    family TEXT,
+    branch TEXT, 
+    rank NUMERIC,
+    difficulty NUMERIC,
+    nation TEXT,
+    conversations INTEGER,
+    levels INTEGER,
+    speed INTEGER,
+    speakers INTEGER,
+    hours INTEGER,
+    words INTEGER);
+    
+INSERT INTO languages VALUES(1, "Spanish", 2, "Indo European", "Romance", 2, 5, "Spain", 25, 4, 10, 474000000, 575, 1000); 
+INSERT INTO languages VALUES(2, "English", 3, "Indo European", "Germanic", 3, 7, "USA", 30, 6, 5, 372000000, 680, 4000); 
+INSERT INTO languages VALUES(3, "French", 17, "Indo European", "Romance", 17, 6, "France", 100, 7, 3, 79000000, 550, 4500); 
+INSERT INTO languages VALUES(4, "Russian", 3, "Indo European", "Balto Slavic", 7, 8, "Russia", 200, 4, 2, 154000000, 1100, 7000);
+INSERT INTO languages VALUES(5, "German", 5, "Indo European", "Romance", 18, 10, "Germany", 2, 7, 7, 75000000, 600, 4000);
+INSERT INTO languages VALUES(6, "Chinese", 9, "Sino Tibetan", "Sinitic", 19, 17, "China", 4, 4, 3, 929000000, 300, 3000);
+INSERT INTO languages VALUES(7, "Japanese", 8, "Japonic", "Japanese", 18, 12, "Japan", 6, 3, 5, 125000000, 600, 4000);
+INSERT INTO languages VALUES(8, "Italian", 7, "Indo European", "Romance", 21, 10, "Italy", 6, 7, 7, 64000000, 600, 4000);
+INSERT INTO languages VALUES(9, "Korean", 3, "Koreanic", "Language Isolate", 13, 23, "Korea", 5, 5, 7, 81000000, 600, 3000);
+INSERT INTO languages VALUES(10, "Dutch", 4, "Indo European", "Germanic", 21, 18, "Netherlands", 6, 4, 5, 23000000, 600, 4000);
+INSERT INTO languages VALUES(11, "Kiswahili", 8, "Bantu", "Bantu", 16, 16, "Tanzania", 3, 2, 7, 70000000, 700, 4000);
+INSERT INTO languages VALUES(12, "Bengali", 4, "Indo European", "Aryan", 17, 13, "Bangladesh", 7, 7, 7, 233000000, 700, 7000);
+INSERT INTO languages VALUES(13, "Danish", 2, "Indo European", "Germanic", 18, 16, "Denmark", 2, 2, 3, 2000000, 500, 4000);
+INSERT INTO languages VALUES(14, "Hindi", 6, "Indo European", "Indo Aryan", 15, 13, "India", 3, 2, 7, 2000000, 100, 3000);
+INSERT INTO languages VALUES(15, "Portuguese", 7, "Indo European", "Romance", 18, 10, "Portugal", 2, 2, 2, 2000000, 200, 4000);
+
+To see what the database looks like
+SELECT * FROM languages;
+
+Edited the branch data
+UPDATE languages SET branch = "Germanic" WHERE branch = "Romance";
+To check it
+SELECT * FROM languages;
+
+Edited the family data
+UPDATE languages SET family = "Koreanic" WHERE family = "Indo European";
+To check it
+SELECT * FROM languages;
+
+Edited the popularity data
+UPDATE languages SET popularity = "20" WHERE popularity = "2";
+To check it
+SELECT * FROM languages;
+
+Deleted branch data
+DELETE FROM languages WHERE branch = "Germanic";
+To check it
+SELECT * FROM languages;
+
+Deleted name data
+DELETE FROM languages WHERE name = "Russian";
+To check it
+SELECT * FROM languages;
+
+Deleted family data
+DELETE FROM languages WHERE family = "Koreanic";
+To check it
+SELECT * FROM languages;
+
+
