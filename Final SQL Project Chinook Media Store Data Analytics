@@ -68,7 +68,7 @@ SELECT SUM(Total)
 FROM chinook.Invoices;
 WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31';
 
-What are the total sales for 2009?
+What are the total sales for 2010?
 SELECT SUM(Total)
 FROM chinook.Invoices
 WHERE InvoiceDate BETWEEN '2010-01-01' AND '2010-12-31';
