@@ -112,7 +112,7 @@ JOIN chinook.Genres g on g.GenreId = t.GenreId;
 
 
 Show the total sales made by each sales agent.
-ELECT emp.FirstName, emp.LastName,
+SELECT emp.FirstName, emp.LastName,
 ROUND(SUM(Inv.Total), 2) as 'Total Sales' 
 FROM chinook.Employees emp
 
